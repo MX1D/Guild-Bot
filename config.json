@@ -1,0 +1,17 @@
+{
+    "token": "",
+    "email": "",
+    "password": "",
+    "apikey": "",
+    "guildid": "",
+    "guildname": "",
+    "webhookid": "",
+    "webhooktoken": "",
+    "logchannelid": "",
+    "chatchannel": "",
+    "mongodb": "",
+    "cooldown": "",
+    "updateschannel": "",
+    "ownerID": "",
+    "fragbot": false
+}
