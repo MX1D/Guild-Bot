@@ -1,8 +1,9 @@
 module.exports = {
     excute(bot, args, text){
+    const config = require("../../config.json")
         const axios = require('axios')
         if(args[0]){
-            axios.get(`https://skyblocknetworth.tk/api/player/networth?minecraft_ign=${args[0]}&hypixel_api_key=25d64b61-c3f0-464e-8f7a-3ec8ab148543`).then((nw) => {
+            axios.get(`https://skyblocknetworth.tk/api/player/networth?minecraft_ign=${args[0]}&hypixel_api_key=${config.apikey}`).then((nw) => {
               const networth = Math.round(nw.data.data.networth.total).toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 0 })
               const pets = Math.round(nw.data.data.networth.pets.total).toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 0 })
               const coins = Math.round(nw.data.data.networth.coins).toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 0 })

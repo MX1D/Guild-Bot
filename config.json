@@ -1,4 +1,5 @@
 {
+    "prefix": "",
     "token": "",
     "email": "",
     "password": "",
@@ -13,5 +14,6 @@
     "cooldown": "",
     "updateschannel": "",
     "ownerID": "",
+    "admintag": "",
     "fragbot": false
 }

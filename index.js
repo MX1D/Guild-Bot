@@ -7,7 +7,7 @@ myIntents.add(Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES)
 const client = new Client( { intents: [myIntents] } )
 const mongoose = require('mongoose')
 const fs = require('fs')
-const prefix = "!"
+const prefix = config.prefix
 
 var options = {
   host: "hypixel.net",
@@ -119,7 +119,7 @@ bot.on("message", message =>{
 
     console.log(command)
     if (admin_commands.includes(command)){
-        if(fullArgs[4] === "[GM]:" || fullArgs[4] === "[GOD]:" || fullArgs[3] === "[GOD]:"){
+        if(fullArgs[4] === "[GM]:" || fullArgs[4] === `[${config.admintag}]:` || fullArgs[3] === `[${config.admintag}]:`){
             console.log("looking for admin command file...")
             const torun = require("./commands/admin/" + command + '.js')
             torun.excute(bot, args, text, author)
