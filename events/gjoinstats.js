@@ -6,7 +6,7 @@ module.exports = {
         const args = text.split(/ +/)
         if(text.includes("joined the guild")){
           if(args[0].includes("[")){
-            axios.get(`https://api.slothpixel.me/api/skyblock/profile/${args[1]}?key=5f135901-f1f1-4e85-9fd8-cd1ecaf7eba8`).then(pid => {
+            axios.get(`https://api.slothpixel.me/api/skyblock/profile/${args[1]}`).then(pid => {
               axios.get(`https://sky.shiiyu.moe/api/v2/profile/${args[1]}`).then(async response => {
                 const id = pid.data.id
                 if(config.mongodb){

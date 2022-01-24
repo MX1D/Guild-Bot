@@ -14,7 +14,8 @@ var options = {
   username: config.email,
   password: config.password,
   version: "1.16",
-  colorsEnabled: false
+  colorsEnabled: false,
+  auth: config.auth
 };
 if(config.mongodb){
   mongoose.connect(config.mongodb, {
@@ -178,7 +179,7 @@ client.on("message", message =>{
   });
 })
 
-client.on("ready", () =>{
+client.once("ready", () =>{
   console.log('ready')
 })
 

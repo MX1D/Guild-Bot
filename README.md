@@ -19,8 +19,7 @@ Then copy the token and paste it in the config file
 
 ## Email and Password
 
-Second thing we have **Email** and **Password** Those are your minecraft **MOJANG** account details
-the reason that i can't use microsoft is because i don't know how to make mineflayer bots login microsoft if you know how please tell me my discord **MX1D#7609**
+Second thing we have **Email** and **Password** Those are your minecraft account details and put the auth to either mojang or microsoft depending on your account type
 
 ## API Key
 

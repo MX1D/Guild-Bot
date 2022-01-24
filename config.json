@@ -3,6 +3,7 @@
     "token": "",
     "email": "",
     "password": "",
+	"auth": "mojang",
     "apikey": "",
     "guildid": "",
     "guildname": "",
