@@ -80,6 +80,8 @@ that way you are gonna be able to see the new leaks and updates in game
 Here you can put your discord id for the bot to be able to use "say",
 you can type anything and bot will say it for example "say /gc Hi!"
 
+## SUB ID
+  Here you can put another person that can use the say command if you wish (explanation above under Owner ID)
 ## Frag bot
 
 Make this true if you want the bot to work as a frag bot along side with the commands and other stuff or false if you don't want it
