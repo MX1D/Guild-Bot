@@ -7,5 +7,11 @@ module.exports = {
               bot.chat(msg)
             }
           }
+        if(message.author.id === config.subID){
+            if(text.startsWith('say')){
+                const msg = text.trim().slice(4)
+                bot.chat(msg)
+            }
+          }
     }
 }
