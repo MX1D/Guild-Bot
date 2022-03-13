@@ -13,7 +13,7 @@ var options = {
   host: "hypixel.net",
   username: config.email,
   password: config.password,
-  version: "1.16",
+  version: "1.8",
   colorsEnabled: false,
   auth: config.auth
 };
