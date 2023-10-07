@@ -5,7 +5,6 @@ const { Client, Intents } = require('discord.js');
 const myIntents = new Intents();
 myIntents.add(Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES)
 const client = new Client( { intents: [myIntents] } )
-const mongoose = require('mongoose')
 const fs = require('fs')
 const prefix = config.prefix
 
@@ -17,13 +16,6 @@ var options = {
   colorsEnabled: false,
   auth: config.auth
 };
-if(config.mongodb){
-  mongoose.connect(config.mongodb, {
-    useNewUrlParser: true,
-  }).then(() =>{
-    console.log('Database connected!')
-  }).catch(e => console.log(e))
-}
 
 var bot = mineflayer.createBot(options);
 
@@ -31,17 +23,11 @@ bot.on('kicked', console.log)
 bot.on('error', console.log)
 
 const command_files = fs.readdirSync("./commands/normal/").filter(files => files.endsWith(".js"));
-const admin_command_files = fs.readdirSync("./commands/admin/").filter(files => files.endsWith(".js"));
 
-const admin_commands = ["ban", "unban", "warn"]
-const commands = ["ess", "stats", "slayers", "skills", "nw", "powder", "lbin", "calc", "8ball", "cf", "ah", "reps", "rep", "warns", "ban", "unban", "warn"]
+const commands = ["calc", "8ball", "cf"]
 
 for (const val of command_files) {
     commands.push(val.replace('.js', ''))
-}
-
-for (const val2 of admin_command_files) {
-    commands.push(val2.replace('.js', ''))
 }
 
 const cdarr = []
@@ -119,14 +105,6 @@ bot.on("message", message =>{
     const command = arr[0]
 
     console.log(command)
-    if (admin_commands.includes(command)){
-        if(fullArgs[4] === "[GM]:" || fullArgs[4] === `[${config.admintag}]:` || fullArgs[3] === `[${config.admintag}]:`){
-            console.log("looking for admin command file...")
-            const torun = require("./commands/admin/" + command + '.js')
-            torun.excute(bot, args, text, author)
-        }
-        return;
-    }
     if (commands.includes(command)) {
         console.log("looking for command file...")
         const torun = require("./commands/normal/" + command + '.js')
@@ -136,7 +114,7 @@ bot.on("message", message =>{
 
 })
 
-const event_files = ["gjoinstats", "autokick", "channellog", "frag", "pjoin", "chatbridge", "consolelogs"]
+const event_files = ["channellog", "chatbridge", "consolelogs"]
 
 const client_files = ["chatbridge", "say", "update"]
 

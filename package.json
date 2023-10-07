@@ -16,7 +16,6 @@
     "fs": "^0.0.1-security",
     "mathjs": "^10.0.0",
     "mineflayer": "^3.7.0",
-    "mongoose": "^6.0.8",
     "string-similarity": "^4.0.4"
   }
 }

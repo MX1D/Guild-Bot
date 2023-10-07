@@ -3,19 +3,13 @@
     "token": "",
     "email": "",
     "password": "",
-	"auth": "mojang",
-    "apikey": "",
-    "guildid": "",
-    "guildname": "",
+	"auth": "microsoft",
+    "guildname": "Quote",
     "webhookid": "",
     "webhooktoken": "",
     "logchannelid": "",
     "chatchannel": "",
-    "mongodb": "",
     "cooldown": "",
-    "updateschannel": "",
     "ownerID": "",
-    "subID": "",
-    "admintag": "",
-    "fragbot": false
+    "subID": "108359975536992256"
 }
